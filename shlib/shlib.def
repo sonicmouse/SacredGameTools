@@ -1,0 +1,19 @@
+;
+; shlib engine definitions and exports
+; Andrew Heinlein [SonicMouse]
+;
+
+LIBRARY shlib
+
+DESCRIPTION 'shlib - a library to decompile and recompile sacred hero files'
+
+EXPORTS
+	shlib_CreateHero @ 1
+	shlib_DestroyHero @ 2
+	shlib_CompileHero @ 3
+	shlib_DecompileHero @ 4
+	shlib_GetSectionsList @ 5
+	shlib_GetHeroSection @ 6
+	shlib_SetHeroSection @ 7
+	shlib_Compress @ 8
+	shlib_Uncompress @ 9

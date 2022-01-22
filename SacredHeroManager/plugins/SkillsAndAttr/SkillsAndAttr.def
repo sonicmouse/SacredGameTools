@@ -1,0 +1,5 @@
+LIBRARY SkillsAndAttr
+
+EXPORTS
+	seaseven_library_details @ 1
+	seaseven_plugin_entry @ 2
