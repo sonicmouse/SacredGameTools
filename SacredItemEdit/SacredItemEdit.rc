@@ -1,0 +1,521 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\SacredItemEdit.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_ICON_ITEM           ICON    DISCARDABLE     "res\\Sacred.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SACREDITEMEDIT_DIALOG DIALOGEX 0, 0, 297, 146
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Sacred Item Manager"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Browse",IDC_BUTTON_BROWSE,235,25,50,14,0,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "&Close",IDC_BUTTON_CLOSE,180,25,50,14,0,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "Re&load",IDC_BUTTON_REFRESH,125,25,50,14,0,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "Exp&ort Item",IDC_BUTTON_EXPORT,125,55,50,14,0,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "&Import Item",IDC_BUTTON_IMPORT,180,55,50,14,0,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "&Delete Item",IDC_BUTTON_DELETE,235,55,50,14,0,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "Place&ment",IDC_BUTTON_GRID,125,70,50,14,0,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "Du&p Item",IDC_BUTTON_DUP,180,70,50,14,0,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "&Edit Item",IDC_BUTTON_EDIT,125,85,50,14,0,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "Unslo&t Item",IDC_BUTTON_UNSLOT,235,85,50,14,0,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "S&hrink Item",IDC_BUTTON_COMPRESS,235,70,50,14,0,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "Save and &Update Hero",IDC_BUTTON_UPDATE,120,110,170,14,
+                    0,WS_EX_STATICEDGE
+    PUSHBUTTON      "&About",IDC_BUTTON_ABOUT,120,125,50,14,0,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "E&xit",IDCANCEL,240,125,50,14,0,WS_EX_STATICEDGE
+    CONTROL         "Tree1",IDC_TREE_ITEMS,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | 
+                    TVS_FULLROWSELECT | WS_TABSTOP,5,20,110,120,
+                    WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_HERO,125,10,160,12,ES_AUTOHSCROLL | ES_READONLY
+    CTEXT           "Total Items: 0",IDC_STATIC_TOTALITEMS,5,5,110,10,
+                    SS_SUNKEN
+    GROUPBOX        "Hero File",IDC_STATIC_CHARFILE,120,0,170,45,BS_CENTER
+    GROUPBOX        "Item Actions",IDC_STATIC_ACT_FRAME,120,45,170,60,
+                    BS_CENTER
+    PUSHBUTTON      "Impo&rt to Slot",IDC_BUTTON_IMPORTSLOT,180,85,50,14,0,
+                    WS_EX_STATICEDGE
+END
+
+IDD_EDITITEM_DIALOG DIALOGEX 0, 0, 377, 201
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Sacred Item"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Hex Edit Control",IDC_HEX_EDIT_CTRL,5,5,240,185,
+                    SS_SUNKEN
+    RTEXT           "Byte Order:",IDC_STATIC,261,12,40,8
+    COMBOBOX        IDC_COMBO_BYTEORDER,305,10,60,60,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "List1",IDC_LIST_CONVERT,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_NOLABELWRAP | LVS_NOCOLUMNHEADER | 
+                    LVS_NOSORTHEADER | WS_TABSTOP,255,25,110,57,
+                    WS_EX_STATICEDGE
+    CONTROL         "&Decimal Data View",IDC_CHECK_DEC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,256,87,85,8
+    COMBOBOX        IDC_COMBO_VIEW,255,110,110,90,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Cancel",IDCANCEL,250,180,55,14,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "&Apply",IDOK,315,180,55,14,0,WS_EX_STATICEDGE
+    GROUPBOX        "",IDC_STATIC,250,0,120,100
+    GROUPBOX        "",IDC_STATIC,250,100,120,75
+    PUSHBUTTON      "Export &Header",IDC_BUTTON_EX_HEADER,315,125,50,14,0,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "&Reset Buffers",IDC_BUTTON_RESET,255,155,110,14,0,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "Export Da&ta",IDC_BUTTON_EX_DATA,315,140,50,14,0,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "Import H&eader",IDC_BUTTON_IM_HEADER,255,125,50,14,0,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "Im&port Data",IDC_BUTTON_IM_DATA,255,140,50,14,0,
+                    WS_EX_STATICEDGE
+END
+
+IDD_EXPORTITEM_DIALOG DIALOGEX 0, 0, 212, 181
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Export Item..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Item &Name:",IDC_STATIC,5,20,45,8
+    EDITTEXT        IDC_EDIT_NAME,55,20,150,12,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    RTEXT           "&Description:",IDC_STATIC,5,35,45,8
+    EDITTEXT        IDC_EDIT_DESC,55,35,150,40,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | NOT WS_BORDER | WS_VSCROLL,
+                    WS_EX_STATICEDGE
+    RTEXT           "&Author:",IDC_STATIC,5,80,45,8
+    EDITTEXT        IDC_EDIT_AUTHOR,55,80,150,12,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    RTEXT           "&Picture:",IDC_STATIC,5,95,45,8
+    LTEXT           "",IDC_STATIC_PICTURE,55,95,85,80,SS_NOTIFY,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "E&xport",IDOK,155,160,50,14,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "&Cancel",IDCANCEL,155,140,50,14,0,WS_EX_STATICEDGE
+    RTEXT           "Item &ID:",IDC_STATIC,5,5,45,8
+    EDITTEXT        IDC_EDIT_ID,55,5,50,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
+    CTEXT           "[Max picture size is 128x128. Images too large will be automatically sized]",
+                    IDC_STATIC,5,105,45,70
+END
+
+IDD_DIALOG_SITBROWSE DIALOGEX 0, 0, 281, 101
+STYLE DS_3DLOOK | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "",IDC_STATIC_IMG,5,5,90,80,SS_NOTIFY,WS_EX_STATICEDGE
+    RTEXT           "Item Name:",IDC_STATIC,100,20,55,8
+    RTEXT           "Item Description:",IDC_STATIC,100,35,55,8
+    RTEXT           "Item Author:",IDC_STATIC,100,70,55,8
+    PUSHBUTTON      "&View Dump",IDC_BUTTON_VIEWDUMP,225,0,50,14
+    EDITTEXT        IDC_EDIT_NAMEZ,160,20,115,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_DESCR,160,35,115,30,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_READONLY | NOT WS_BORDER | 
+                    WS_VSCROLL,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_AUTHZ,160,70,115,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_IDZ,160,5,60,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    RTEXT           "Item ID:",IDC_STATIC,100,5,55,8
+    CTEXT           "",IDC_STATIC_INVSIZEZ,5,90,90,8
+END
+
+IDD_DUMPVIEWER_DIALOG DIALOG DISCARDABLE  0, 0, 252, 196
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "View Dump..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "",IDC_STATIC_DUMPER,5,5,240,185,SS_SUNKEN
+END
+
+IDD_ABOUT_DIALOG DIALOGEX 0, 0, 217, 210
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Sacred Item Manager..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "",IDC_STATIC_ABOUT,5,5,205,180,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "&OK",IDOK,160,190,50,14,0,WS_EX_STATICEDGE
+END
+
+IDD_PLACEMENT_DIALOG DIALOGEX 0, 0, 171, 100
+STYLE WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Item Placement"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "chest",IDC_STATIC_CH,5,5,130,55,SS_NOTIFY,
+                    WS_EX_STATICEDGE
+    LTEXT           "backpack",IDC_STATIC_BP,5,65,145,20,SS_NOTIFY,
+                    WS_EX_STATICEDGE
+END
+
+IDD_DIALOG_PICBROWSE DIALOGEX 0, 0, 206, 91
+STYLE DS_3DLOOK | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "",IDC_STATIC_IMGV,5,5,90,80,0,WS_EX_STATICEDGE
+    CONTROL         "&Show Preview",IDC_CHECK_SHOW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,100,75,61,10
+END
+
+IDD_DUPITEM_DIALOG DIALOGEX 0, 0, 132, 66
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Duplicate Item"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT_TIMES,10,10,55,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    GROUPBOX        "How Many?",IDC_STATIC,5,0,65,42,BS_CENTER
+    CONTROL         "&Shrink Items",IDC_CHECK_SHRINK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,27,55,8
+    PUSHBUTTON      "&Cancel",IDCANCEL,75,5,50,14,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "&OK",IDOK,75,25,50,14,0,WS_EX_STATICEDGE
+    COMBOBOX        IDC_COMBO_TO,5,45,120,80,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Spin1",IDC_SPIN_DUPER,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS | 
+                    UDS_HOTTRACK,60,5,10,15
+END
+
+IDD_IMPORTITEM_DIALOG DIALOGEX 0, 0, 207, 66
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Import Item..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT_IMPORTITEM,10,10,130,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "&Browse",IDC_BUTTON_IMPORT_BROWSE,145,10,50,14,0,
+                    WS_EX_STATICEDGE
+    CONTROL         "&Shrink Item",IDC_CHECK_IMPORT_SHRINK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,25,51,8
+    COMBOBOX        IDC_COMBO_IMPORTTO,5,45,85,95,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Cancel",IDCANCEL,95,45,50,14,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "&Import",IDOK,150,45,50,14,0,WS_EX_STATICEDGE
+    GROUPBOX        "Item To Import",IDC_STATIC,5,0,195,40
+END
+
+IDD_IMPORTTOSLOT_DIALOG DIALOGEX 0, 0, 207, 101
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Import To Slot..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Item To Import",IDC_STATIC,5,0,195,30
+    EDITTEXT        IDC_EDIT_ITEMSLOT,10,10,130,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "&Browse",IDC_BUTTON_BROWSE_ITOS,145,10,50,14,0,
+                    WS_EX_STATICEDGE
+    CONTROL         "Bron&ze (no bonus)",IDC_RADIO_BRONZE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,10,40,80,8
+    CONTROL         "&Silver (+5 - 6%)",IDC_RADIO_SILVER,"Button",
+                    BS_AUTORADIOBUTTON,10,50,80,8
+    CONTROL         "&Gold (+10 - 12%)",IDC_RADIO_GOLD,"Button",
+                    BS_AUTORADIOBUTTON,10,60,80,8
+    CONTROL         "Gree&n (+15 - 20%)",IDC_RADIO_GREEN,"Button",
+                    BS_AUTORADIOBUTTON,10,70,80,10
+    CONTROL         "&Platinum (??)",IDC_RADIO_PLATINUM,"Button",
+                    BS_AUTORADIOBUTTON,10,80,57,10
+    GROUPBOX        "Slot Color",IDC_STATIC,5,30,90,65
+    PUSHBUTTON      "&OK",IDOK,150,80,50,14,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "&Cancel",IDCANCEL,150,60,50,14,0,WS_EX_STATICEDGE
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "SacredItemEdit MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "SacredItemEdit\0"
+            VALUE "LegalCopyright", "Copyright (C) 2004\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "SacredItemEdit.EXE\0"
+            VALUE "ProductName", "SacredItemEdit Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_SACREDITEMEDIT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 290
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 139
+    END
+
+    IDD_EXPORTITEM_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 174
+    END
+
+    IDD_DIALOG_SITBROWSE, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 96
+    END
+
+    IDD_DUMPVIEWER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_ABOUT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_PLACEMENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 164
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 93
+    END
+
+    IDD_DIALOG_PICBROWSE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 199
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_IMPORTITEM_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+
+    IDD_IMPORTTOSLOT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 94
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_EDITITEM_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_BYTEORDER, 0x403, 6, 0
+0x6e49, 0x6574, 0x006c, 
+    IDC_COMBO_BYTEORDER, 0x403, 9, 0
+0x6f4d, 0x6f74, 0x6f72, 0x616c, "\000" 
+    IDC_COMBO_VIEW, 0x403, 20, 0
+0x6956, 0x7765, 0x4920, 0x6574, 0x206d, 0x6144, 0x6174, 0x4f20, 0x6c6e, 
+0x0079, 
+    IDC_COMBO_VIEW, 0x403, 22, 0
+0x6956, 0x7765, 0x4920, 0x6574, 0x206d, 0x6548, 0x6461, 0x7265, 0x4f20, 
+0x6c6e, 0x0079, 
+    IDC_COMBO_VIEW, 0x403, 26, 0
+0x6956, 0x7765, 0x4920, 0x6574, 0x206d, 0x6144, 0x6174, 0x4120, 0x646e, 
+0x4820, 0x6165, 0x6564, 0x0072, 
+    0
+END
+
+IDD_DUPITEM_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_TO, 0x403, 19, 0
+0x7544, 0x6c70, 0x6369, 0x7461, 0x2065, 0x6f54, 0x4320, 0x6568, 0x7473, 
+"\000" 
+    IDC_COMBO_TO, 0x403, 22, 0
+0x7544, 0x6c70, 0x6369, 0x7461, 0x2065, 0x6f54, 0x4220, 0x6361, 0x706b, 
+0x6361, 0x006b, 
+    0
+END
+
+IDD_IMPORTITEM_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_IMPORTTO, 0x403, 19, 0
+0x6d49, 0x6f70, 0x7472, 0x5420, 0x206f, 0x6142, 0x6b63, 0x6170, 0x6b63, 
+"\000" 
+    IDC_COMBO_IMPORTTO, 0x403, 16, 0
+0x6d49, 0x6f70, 0x7472, 0x5420, 0x206f, 0x6843, 0x7365, 0x0074, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_EDIT_COPY MENU DISCARDABLE 
+BEGIN
+    POPUP "popup"
+    BEGIN
+        MENUITEM "&Copy",                       IDM_COPY
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_ABOUT        BITMAP  DISCARDABLE     "res\\sacred_200.bmp"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\SacredItemEdit.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
